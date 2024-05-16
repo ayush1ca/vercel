@@ -14,7 +14,7 @@ build-node:
     - npm i  # Use npm ci for consistent installs
     - node -v
     # - npm start
-    - npm run build
+    # - npm run build
   artifacts:
     paths:
       - build

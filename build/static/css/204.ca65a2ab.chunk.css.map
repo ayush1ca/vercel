@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/204.ca65a2ab.chunk.css","mappings":"AACI,wBACI","sources":["pages/auth/VerifyCode/VerifyCode.scss"],"sourcesContent":[".text-center {\n    .ant-input {\n        text-align: center;\n      }\n}"],"names":[],"sourceRoot":""}
