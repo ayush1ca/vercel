@@ -2,6 +2,7 @@ name: Vercel Production Deployment
 env:
   VERCEL_ORG_ID: "team_9vwKri1ZWdsQBpXeZlO5JRja"
   VERCEL_PROJECT_ID: "prj_oAN4OcwxAMMk6eC0K71uaFB6XQiv"
+  VERCEL_TOKEN: "oBUyOppsBV8nEPnzMsuYr22C"
 on:
   push:
     branches:
