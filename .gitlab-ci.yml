@@ -26,6 +26,6 @@ deploy:
   script:
     - npm install netlify-cli -g  # Install Netlify CLI globlly
     - netlify login  # Authenticate with Netlify
-    - netlify deploy --site 577f4836-efe4-41dd-9df1-9f687b5b30d3 --auth nfp_m6DjScFeey5AtbjSURREPX2HT29z3Nc2b3ca --prod  # Deploy to Ntlify
+    - netlify deploy --site 577f4836-efe4-41dd-9df1-9f687b5b30d3 --auth nfp_m6DjScFeey5AtbjSURREPX2HT29z3Nc2b3ca --prod --dir build/ # Deploy to Ntlify
   only:
    - master
