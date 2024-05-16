@@ -19,7 +19,7 @@ build-node:
     paths:
       - build
   only:
-   - new-ne
+   - master
 
 deploy:
   stage: deploy
@@ -28,4 +28,4 @@ deploy:
     - netlify login  # Authenticate with Netlify
     - netlify deploy --site 577f4836-efe4-41dd-9df1-9f687b5b30d3 --auth lHRw3FIQFF4rXiPm --prod  # Deploy to Ntlify
   only:
-   - new-ne
+   - master
