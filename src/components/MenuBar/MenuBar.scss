@@ -1,0 +1,35 @@
+.ant-menu-title-content {
+  line-height: 46px;
+  width: fit-content !important;
+}
+.ant-menu-vertical .ant-menu-item {
+  text-overflow: initial;
+}
+.ant-menu-light .ant-menu-item-selected {
+  background: transparent;
+}
+// .ant-menu-overflow {
+//   display: block;
+// }
+.ant-menu-horizontal {
+  border: none;
+}
+
+.ant-menu-light {
+  background: none;
+}
+
+// :where(.css-dev-only-do-not-override-1d9st98).ant-menu-vertical .ant-menu-item {
+//   width: auto !important;
+// }
+// :where(.css-1hjncvu).ant-menu-vertical .ant-menu-item{
+//   width: auto !important;
+// }
+// :where(.css-1d9st98).ant-menu-vertical .ant-menu-item{
+//   width: auto !important;
+// }
+// 1d9st98
+
+  .ant-menu-vertical .ant-menu-item{
+    width: auto !important;
+  }

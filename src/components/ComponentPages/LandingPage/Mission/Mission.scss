@@ -1,0 +1,14 @@
+.landing_mission_image {
+    background-image: url("../../../../assets/images/BgLines/Landing/LandingTopBlue.svg"),
+      url("../../../../assets/images/BgLines/Landing/LandingTopWhite.svg");
+    background-repeat: no-repeat;
+    background-position: top left, bottom right;
+  }
+  
+  @media screen and (max-width: 576px) {
+    .landing_mission_image {
+      background-image: url("../../../../assets/images/BgLines/Landing/LandingTopBlue.svg");
+      background-repeat: no-repeat;
+    }
+  }
+  

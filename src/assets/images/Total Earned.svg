@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="193" viewBox="0 0 200 193">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_33207" data-name="Rectangle 33207" width="200" height="193" rx="16" transform="translate(944 304)" fill="#00e0be" opacity="0.16"/>
+    </clipPath>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#00e0be"/>
+      <stop offset="1" stop-color="#00e0be" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="clip-Total_Earned_">
+      <rect width="200" height="193"/>
+    </clipPath>
+  </defs>
+  <g id="Total_Earned_" data-name="Total Earned " clip-path="url(#clip-Total_Earned_)">
+    <g id="Mask_Group_30" data-name="Mask Group 30" transform="translate(-944 -304)" clip-path="url(#clip-path)">
+      <path id="Ellipse_653_-_Outline" data-name="Ellipse 653 - Outline" d="M246.827,42.593A203.554,203.554,0,0,0,42.55,247.078C42.875,360.336,134.86,452.414,248,452.739A203.554,203.554,0,0,0,452.281,248.255C451.956,135,359.971,42.918,246.827,42.593M246.7,0C383.13.393,494.438,111.814,494.83,248.377s-110.279,247.346-246.7,246.954S.393,383.519,0,246.956,110.28-.391,246.7,0Z" transform="translate(601.607 72.437) rotate(-14)" fill="url(#linear-gradient)"/>
+    </g>
+  </g>
+</svg>

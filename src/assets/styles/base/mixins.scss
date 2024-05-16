@@ -1,0 +1,68 @@
+$grid-breakpoints: (
+  4xl: 1920px,
+  3xl: 1440px,
+  xxl: 1300px,
+  xl: 1200px,
+  lg: 992px,
+  md: 768px,
+  sm: 576px,
+  xs: 360px,
+) !default;
+
+
+@mixin media_query($br) {
+  @media screen and (max-width: $br) {
+    @content;
+  }
+}
+
+
+//    >> breakpoint-max(md, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1400px))
+//    767.98px
+@function breakpoint-max($name, $breakpoints: $grid-breakpoints) {
+  $max: map-get($breakpoints, $name);
+  @return if($max and $max > 0, $max - .02, null);
+}
+
+// Media of at most the maximum breakpoint width. No query for the largest breakpoint.
+// Makes the @content apply to the given breakpoint and narrower.
+@mixin media-breakpoint-down($name, $breakpoints: $grid-breakpoints) {
+  $max: breakpoint-max($name, $breakpoints);
+  @if $max {
+    @media (max-width: $max) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+// create dynamic 1 to 100
+
+// $z-index: ();
+// @function zIndex() {
+//   @for $i from 1 through 100 {
+//     $z-index: map.merge(
+//       $dynamic-object,
+//       (
+//         $i: $i,
+//       )
+//     );
+//   }
+//   @debug $z-index;
+//   @return $z-index;
+// }
+
+// @each $key, $value in $z-index {
+//   .z-index-#{$key} {
+//     z-index: $value;
+//   }
+// }
+
+@mixin img-fluid {
+  // Part 1: Set a maximum relative to the parent
+  max-width: 100%;
+  // Part 2: Override the height to auto, otherwise images will be stretched
+  // when setting a width and height attribute on the img element.
+  height: auto;
+}

@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="262" height="697" viewBox="0 0 262 697">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        clip-path: url(#clip-Our_vision_-_Pattern_-_1);
+      }
+
+      .cls-3 {
+        clip-path: url(#clip-path);
+      }
+
+      .cls-4 {
+        fill: url(#linear-gradient);
+      }
+    </style>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_33193" data-name="Rectangle 33193" class="cls-1" width="1440" height="697" transform="translate(-1026 349)"/>
+    </clipPath>
+    <linearGradient id="linear-gradient" x1="1" y1="0.399" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ffcc01"/>
+      <stop offset="1" stop-color="#ffcc01" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="clip-Our_vision_-_Pattern_-_1">
+      <rect width="262" height="697"/>
+    </clipPath>
+  </defs>
+  <g id="Our_vision_-_Pattern_-_1" data-name="Our vision - Pattern - 1" class="cls-2">
+    <g id="BG" class="cls-3" transform="translate(1026 -349)">
+      <path id="Ellipse_653_-_Outline" data-name="Ellipse 653 - Outline" class="cls-4" d="M601.888,81.153c-287.594,0-520.736,233.141-520.736,520.736s233.141,520.736,520.736,520.736,520.736-233.141,520.736-520.736S889.483,81.153,601.888,81.153m0-108.153c346.77,0,628.888,282.118,628.888,628.888s-282.118,628.888-628.888,628.888S-27,948.659-27,601.888,255.118-27,601.888-27Z" transform="matrix(0.07, 0.998, -0.998, 0.07, 1206.315, -468.516)"/>
+      <path id="Ellipse_653_-_Outline-2" data-name="Ellipse 653 - Outline" class="cls-4" d="M574.824,76.5C299.607,76.5,76.5,299.607,76.5,574.824S299.607,1073.15,574.824,1073.15,1073.15,850.042,1073.15,574.824,850.042,76.5,574.824,76.5m0-103.5c331.847,0,601.824,269.977,601.824,601.824s-269.977,601.824-601.824,601.824S-27,906.671-27,574.824,242.977-27,574.824-27Z" transform="translate(-558.316 1012.452) rotate(141)"/>
+    </g>
+  </g>
+</svg>

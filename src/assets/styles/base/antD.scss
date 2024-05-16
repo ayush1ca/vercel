@@ -1,0 +1,79 @@
+@import "./variables.scss";
+
+.ant-input-affix-wrapper,
+.ant-input {
+  background-color: $placeholder-color;
+  border: none;
+}
+
+.custom-drawer {
+  .ant-drawer-body {
+    padding: 0 !important;
+    margin-top: -33px;
+    z-index: 0;
+  }
+
+  .ant-drawer-header {
+    padding: 0 !important;
+    z-index: 1;
+    border: 0;
+  }
+
+  .ant-header-close-only {
+    padding: 8px;
+  }
+
+  .ant-drawer-close {
+    padding: 5px;
+    padding-top: 10px;
+  }
+}
+
+.ant-modal-content {
+  width: fit-content;
+}
+
+.ant-collapse-header {
+  flex-direction: row-reverse;
+}
+
+.ant-collapse-header-text {
+  color: $primary-dark-color;
+}
+
+.ant-dropdown,
+.ant-dropdown-menu {
+  width: 200px;
+  padding: 30px;
+}
+
+.ant-typography {
+  display: flex;
+  justify-content: space-between;
+}
+
+.ant-row {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.custom-menu {
+  .ant-menu,
+  .ant-menu-item {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}
+
+.ant-layout-footer {
+  background-color: white !important;
+  padding: 10px 50px !important;
+}
+
+.ant-float-btn-default .ant-float-btn-body:hover {
+  background-color: $white-color;
+}
+
+.ant-float-btn-body {
+  background-color: $primary-color !important;
+}

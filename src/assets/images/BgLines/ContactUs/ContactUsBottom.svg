@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="260" height="573" viewBox="0 0 260 573">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_33198" data-name="Rectangle 33198" width="260" height="573" transform="translate(-1026 384)" fill="#fff"/>
+    </clipPath>
+    <linearGradient id="linear-gradient" x1="1" y1="0.399" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#1fa9ff"/>
+      <stop offset="1" stop-color="#1fa9ff" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="clip-Contact_Us_-_Pattern_1">
+      <rect width="260" height="573"/>
+    </clipPath>
+  </defs>
+  <g id="Contact_Us_-_Pattern_1" data-name="Contact Us - Pattern 1" clip-path="url(#clip-Contact_Us_-_Pattern_1)">
+    <g id="BG" transform="translate(1026 -384)" clip-path="url(#clip-path)">
+      <path id="Ellipse_653_-_Outline" data-name="Ellipse 653 - Outline" d="M395.823,45.715c-193.359,0-350.108,156.749-350.108,350.108S202.463,745.93,395.823,745.93,745.93,589.182,745.93,395.823,589.182,45.715,395.823,45.715m0-72.715c233.145,0,422.823,189.677,422.823,422.823S628.968,818.645,395.823,818.645-27,628.968-27,395.823,162.677-27,395.823-27Z" transform="matrix(0.07, 0.998, -0.998, 0.07, 828.534, -223.577)" fill="url(#linear-gradient)"/>
+      <path id="Ellipse_653_-_Outline-2" data-name="Ellipse 653 - Outline" d="M574.824,76.5C299.607,76.5,76.5,299.607,76.5,574.824S299.607,1073.15,574.824,1073.15,1073.15,850.042,1073.15,574.824,850.042,76.5,574.824,76.5m0-103.5c331.847,0,601.824,269.977,601.824,601.824s-269.977,601.824-601.824,601.824S-27,906.671-27,574.824,242.977-27,574.824-27Z" transform="translate(-603.309 1133.545) rotate(153)" fill="url(#linear-gradient)"/>
+    </g>
+  </g>
+</svg>

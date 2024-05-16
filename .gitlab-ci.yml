@@ -1,0 +1,31 @@
+image: node:18.19.0 # Use lightweight Node.js 16 image
+
+stages:
+  - build
+  - deploy
+
+cache:
+  paths:
+    - node_modules/
+
+build-node:
+  stage: build
+  script:
+    - npm i  # Use npm ci for consistent installs
+    - node -v
+    # - npm start
+    - npm run build
+  artifacts:
+    paths:
+      - build
+  only:
+   - new-ne
+
+deploy:
+  stage: deploy
+  script:
+    - npm install netlify-cli -g  # Install Netlify CLI globlly
+    - netlify login  # Authenticate with Netlify
+    - netlify deploy --site 577f4836-efe4-41dd-9df1-9f687b5b30d3 --auth lHRw3FIQFF4rXiPm --prod  # Deploy to Ntlify
+  only:
+   - new-ne

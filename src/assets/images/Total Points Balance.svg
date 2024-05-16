@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="416" height="136" viewBox="0 0 416 136">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_33209" data-name="Rectangle 33209" width="416" height="136" rx="16" transform="translate(-613.231 286)" fill="#fff"/>
+    </clipPath>
+    <linearGradient id="linear-gradient" x1="1" y1="0.399" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#1fa9ff"/>
+      <stop offset="1" stop-color="#1fa9ff" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="clip-Total_Points_Balance">
+      <rect width="416" height="136"/>
+    </clipPath>
+  </defs>
+  <g id="Total_Points_Balance" data-name="Total Points Balance" clip-path="url(#clip-Total_Points_Balance)">
+    <g id="BG" transform="translate(613.231 -286)" clip-path="url(#clip-path)">
+      <path id="Ellipse_653_-_Outline" data-name="Ellipse 653 - Outline" d="M486.909,84.7c-222.82-.64-402.933,179.656-402.293,402.7s181.79,404.379,404.61,405.019S892.16,712.766,891.52,489.72,709.729,85.341,486.909,84.7M486.669.823c268.668.772,487.873,220.2,488.645,489.138S758.136,977.072,489.468,976.3,1.595,756.1.823,487.162,218,.051,486.669.823Z" transform="translate(-70.635 -57.112) rotate(32)" fill="url(#linear-gradient)"/>
+      <path id="Ellipse_653_-_Outline-2" data-name="Ellipse 653 - Outline" d="M369.788,63.925C200.889,63.872,64.012,200.445,64.065,368.97S201.079,674.155,369.977,674.208,675.753,537.687,675.7,369.162,538.686,63.977,369.788,63.925M369.768.549C573.419.613,739.153,165.981,739.216,369.182S573.648,737.647,370,737.583.612,572.151.549,368.951,166.117.485,369.768.549Z" transform="matrix(-0.669, -0.743, 0.743, -0.669, -783.962, 655.83)" fill="url(#linear-gradient)"/>
+    </g>
+  </g>
+</svg>

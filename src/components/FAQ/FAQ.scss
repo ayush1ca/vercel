@@ -1,0 +1,59 @@
+// faq section custom borders
+
+@mixin border-top-radius {
+  border-top-left-radius: 8px !important;
+  border-top-right-radius: 8px !important;
+}
+
+@mixin border-bottom-radius {
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+@mixin border-bottom-0 {
+  border-bottom-left-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+
+@mixin border {
+  border: 1px solid #c4c7ce;
+}
+
+.ant-collapse {
+  border: 0px;
+}
+
+.ant-collapse-header {
+  margin-top: 10px;
+  @include border();
+  @include border-top-radius();
+  @include border-bottom-radius();
+}
+
+.ant-collapse-content {
+  margin: 0;
+  @include border();
+  @include border-bottom-radius();
+}
+
+.ant-collapse-item-active {
+  .ant-collapse-content-active {
+    border-top: 0px;
+  }
+  .ant-collapse-header {
+    border-bottom: 0px;
+    @include border-bottom-0();
+  }
+}
+
+.ant-collapse {
+  .ant-collapse-item {
+    border-bottom: 0px;
+  }
+  .ant-collapse-content {
+    border-top: 0px;
+
+    .ant-collapse-content-box {
+      padding-top: 1px;
+    }
+  }
+}

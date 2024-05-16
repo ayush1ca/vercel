@@ -1,0 +1,15 @@
+.card_image {
+    background-image: url("../../assets/images/BgLines/AboutUs/AboutUsBottomYellow.svg"),
+      url("../../assets/images/BgLines/AboutUs/AboutUsTopYellow.svg");
+    background-repeat: no-repeat;
+    background-position: bottom left, top right;
+    bottom:0px;
+  }
+  
+  @media screen and (max-width: 576px) {
+    .card_image {
+      background-image: url("../../assets/images/BgLines/AboutUs/AboutUsTopYellow.svg");
+      background-repeat: no-repeat;
+      background-position: bottom right;
+    }
+  }

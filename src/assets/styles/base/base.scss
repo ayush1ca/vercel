@@ -1,0 +1,1226 @@
+/* Variable Declarations */
+@import "variables";
+@import "./mixins.scss";
+
+$spaces: (
+  0: 0em,
+  1: 0.25em,
+  2: 0.5em,
+  3: 0.75em,
+  4: 1em,
+  5: 1.25em,
+  6: 1.5em,
+  7: 1.75em,
+  8: 2em,
+  9: 2.25em,
+  10: 2.5em,
+  11: 2.75em,
+  12: 3em,
+  13: 3.25em,
+  14: 4em,
+  15: 5em,
+  16: 6em,
+  17: 7em,
+  18: 8em,
+  19: 9em,
+  20: 10em,
+  21: 11em,
+  22: 12em,
+  23: 13em,
+  24: 14em,
+  26: 16em,
+  27: 17em,
+  28: 18em,
+  29: 19em,
+  30: 20em,
+  32: 22em,
+  34: 24em,
+  35: 26em,
+  36: 28em,
+  38: 30em,
+  40: 32em,
+  42: 34em,
+  44: 36em,
+  46: 38em,
+  48: 40em,
+  50: 42em,
+  52: 44em,
+  54: 46em,
+  55: 47em,
+  56: 48em,
+  57: 49em,
+  58: 50em,
+  59: 51em,
+  60: 52em,
+  61: 53em,
+  62: 54em,
+  63: 55em,
+  64: 56em,
+  65: 57em,
+  66: 58em,
+  auto: auto,
+);
+
+/* Margin Classes */
+
+$grid-breakpoints: (
+  4xl: 1920px,
+  3xl: 1440px,
+  xxl: 1300px,
+  xl: 1200px,
+  lg: 992px,
+  md: 768px,
+  sm: 576px,
+  xs: 360px,
+) !default;
+
+$fonts: (
+  1: 1em,
+  2: 1.10em,
+  3: 1.5em,
+  4: 1.75em,
+  5: 2em,
+  6: 2.25em,
+  7: 2.5em,
+  8: 2.75em,
+  9: 3em,
+  10: 3.25em,
+  11: 3.5em,
+  12: 3.75em,
+  13: 4em,
+  14: 4.25em,
+  15: 4.5em,
+  16: 5em,
+  17: 5.25em,
+  18: 5.5em,
+  19: 5.75em,
+  20: 6em,
+  small: 0.85em,
+  smaller: 0.5em,
+);
+
+$line-height: (
+  1: 1em,
+  2: 1.25em,
+  3: 1.5em,
+  4: 1.75em,
+  5: 2em,
+  6: 2.25em,
+  7: 2.5em,
+  8: 2.75em,
+  9: 3em,
+);
+
+/* Font Weight */
+$font-weight: (
+  9: 900,
+  8: 800,
+  7: 700,
+  6: 600,
+  5: 500,
+  4: 400,
+  3: 300,
+  2: 200,
+  1: 100,
+  bolder: bolder,
+  bold: bold,
+  normal: normal,
+  lighter: lighter,
+);
+
+$border: (
+  1: 1px,
+  2: 2px,
+  3: 3px,
+);
+
+$opacity: (
+  0: 0,
+  1: 0.1,
+  2: 0.2,
+  3: 0.3,
+  4: 0.4,
+  5: 0.5,
+  6: 0.6,
+  7: 0.7,
+  8: 0.8,
+  9: 0.9,
+);
+
+$backdrop: (
+  0: 0,
+  1: 1px,
+  2: 2px,
+  3: 3px,
+  4: 4px,
+  5: 5px,
+  6: 6px,
+  7: 7px,
+  8: 8px,
+  9: 9px,
+);
+
+$z-index: (
+  0: 0,
+  1: 1,
+  2: 2,
+  3: 3,
+  4: 4,
+  5: 5,
+  6: 6,
+  7: 7,
+  8: 8,
+  9: 9,
+  10: 10,
+  15: 15,
+  25: 25,
+  50: 50,
+  100: 100,
+  900: 900,
+);
+
+$display: (
+  flex: flex,
+  grid: grid,
+  block: block,
+  inline: inline,
+  inline-block: inline-block,
+  none: none,
+);
+
+// @each $br_key, $br in $grid-breakpoints {
+//   @include media-breakpoint-down($br_key, $breakpoints: $grid-breakpoints) {
+//   }
+// }
+/* -------------- Animation Classes ----------------*/
+
+$animation: (
+  21: 21s,
+  14: 14s,
+  7: 7s,
+  6: 6s,
+  5: 5s,
+  4: 4s,
+  3: 3s,
+  2: 2s,
+  1: 1s,
+  0: 0s,
+);
+/* ------------------- BackDrop Classes ------------------ */
+@each $key, $value in $backdrop {
+  .backdrop-#{$key} {
+    backdrop-filter: blur($value);
+  }
+}
+
+@each $br_key, $br in $grid_breakpoints {
+  @each $key, $value in $backdrop {
+    .backdrop-#{$br_key}-#{$key} {
+      backdrop-filter: blur($value);
+    }
+  }
+}
+/* ------------------- Margin, Padding Classes ------------------ */
+@each $key, $value in $animation {
+  .animation-delay-#{$key} {
+    animation-delay: $value !important;
+  }
+}
+
+/* ------------------- Margin, Padding Classes ------------------ */
+@each $key, $value in $display {
+  .d-#{$key} {
+    display: $value;
+  }
+}
+
+/* ------------------- Margin, Padding Classes ------------------ */
+
+// .fix-header {
+//   margin-left: 3.125em;
+//   margin-right: 3.125em;
+// }
+
+.container {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+@each $key, $value in $spaces {
+  /* Margin Classes */
+  .m-#{$key} {
+    margin-top: $value;
+    margin-bottom: $value;
+    margin-left: $value;
+    margin-right: $value;
+  }
+  .mt-#{$key} {
+    margin-top: $value;
+  }
+  .-mt-#{$key} {
+    margin-top: -$value;
+  }
+  .mb-#{$key} {
+    margin-bottom: $value;
+  }
+  .-mb-#{$key} {
+    margin-bottom: -$value;
+  }
+  .ml-#{$key} {
+    margin-left: $value;
+  }
+  .mr-#{$key} {
+    margin-right: $value;
+  }
+  .mx-#{$key} {
+    margin-left: $value;
+    margin-right: $value;
+  }
+  .my-#{$key} {
+    margin-top: $value;
+    margin-bottom: $value;
+  }
+
+  /* Padding Classes */
+  .p-#{$key} {
+    padding-top: $value;
+    padding-bottom: $value;
+    padding-left: $value;
+    padding-right: $value;
+  }
+  .pt-#{$key} {
+    padding-top: $value;
+  }
+  .pb-#{$key} {
+    padding-bottom: $value;
+  }
+  .pl-#{$key} {
+    padding-left: $value;
+  }
+  .pr-#{$key} {
+    padding-right: $value;
+  }
+  .px-#{$key} {
+    padding-left: $value;
+    padding-right: $value;
+  }
+  .py-#{$key} {
+    padding-top: $value;
+    padding-bottom: $value;
+  }
+}
+
+$old_breakpoints: null;
+@each $br_key, $br in $grid-breakpoints {
+  $old_breakpoint_key: $br_key;
+  @each $key, $value in $spaces {
+    @include media-breakpoint-down($br_key, $breakpoints: $grid-breakpoints) {
+      /* Margin Classes */
+      .m-#{$br_key}-#{$key} {
+        margin-top: $value;
+        margin-bottom: $value;
+        margin-left: $value;
+        margin-right: $value;
+      }
+      .-m-#{$br_key}-#{$key} {
+        margin-top: -$value;
+        margin-bottom: -$value;
+        margin-left: -$value;
+        margin-right: -$value;
+      }
+
+      .mt-#{$br_key}-#{$key} {
+        margin-top: $value;
+      }
+      .-mt-#{$br_key}-#{$key} {
+        margin-top: -$value;
+      }
+      .mb-#{$br_key}-#{$key} {
+        margin-bottom: $value;
+      }
+      .ml-#{$br_key}-#{$key} {
+        margin-left: $value;
+      }
+      .mr-#{$br_key}-#{$key} {
+        margin-right: $value;
+      }
+      .mx-#{$br_key}-#{$key} {
+        margin-left: $value;
+        margin-right: $value;
+      }
+      .my-#{$br_key}-#{$key} {
+        margin-top: $value;
+        margin-bottom: $value;
+      }
+
+      /* Padding Classes*/
+      .p-#{$br_key}-#{$key} {
+        padding-top: $value;
+        padding-bottom: $value;
+        padding-left: $value;
+        padding-right: $value;
+      }
+      .pt-#{$br_key}-#{$key} {
+        padding-top: $value;
+      }
+      .pb-#{$br_key}-#{$key} {
+        padding-bottom: $value;
+      }
+      .pl-#{$br_key}-#{$key} {
+        padding-left: $value;
+      }
+      .pr-#{$br_key}-#{$key} {
+        padding-right: $value;
+      }
+      .px-#{$br_key}-#{$key} {
+        padding-left: $value;
+        padding-right: $value;
+      }
+      .py-#{$br_key}-#{$key} {
+        padding-top: $value;
+        padding-bottom: $value;
+      }
+    }
+  }
+}
+
+/*--------------- Display None Classes ----------------*/
+@each $br_key, $br in $grid-breakpoints {
+  @include media-breakpoint-down($br_key, $breakpoints: $grid-breakpoints) {
+    .d-#{$br_key}-none {
+      display: none;
+    }
+  }
+}
+.d-none {
+  display: none;
+}
+
+/* ------------------- Flex Classes ------------------ */
+
+@each $br_key, $value in $grid-breakpoints {
+  @include media-breakpoint-down($br_key, $breakpoints: $grid-breakpoints) {
+    /* Flex Classes */
+    .d-#{$br_key}-flex {
+      display: flex;
+    }
+  }
+}
+
+$align-items: (
+  center: center,
+  start: flex-start,
+  end: flex-end,
+  stretch: stretch,
+  baseline: baseline,
+);
+
+$align-self: (
+  center: center,
+  start: flex-start,
+  end: flex-end,
+  stretch: stretch,
+);
+
+$justify-items: (
+  center: center,
+  start: flex-start,
+  end: flex-end,
+  normal: normal,
+);
+
+$justify-self: (
+  center: center,
+  start: flex-start,
+  end: flex-end,
+  normal: normal,
+);
+
+$justify-content: (
+  center: center,
+  start: flex-start,
+  end: flex-end,
+  between: space-between,
+  around: space-around,
+  evenly: space-evenly,
+);
+
+/* ---------------- Align Classes ------------------- */
+
+/* Align Items */
+@each $key, $value in $align-items {
+  .align-items-#{$key} {
+    align-items: $value;
+  }
+}
+@each $br_key, $value in $grid-breakpoints {
+  @include media-breakpoint-down($br_key, $breakpoints: $grid-breakpoints) {
+    @each $key, $value in $align-items {
+      .align-items#{$br_key}-#{$key} {
+        align-items: $value;
+      }
+    }
+  }
+}
+
+/* Align Self */
+@each $key, $value in $align-self {
+  .align-self-#{$key} {
+    align-self: $value;
+  }
+}
+@each $br_key, $value in $grid-breakpoints {
+  @include media-breakpoint-down($br_key, $breakpoints: $grid-breakpoints) {
+    @each $key, $value in $align-self {
+      .align-self-#{$br_key}-#{$key} {
+        align-self: $value;
+      }
+    }
+  }
+}
+
+/* ---------------- Justify Classes ------------------- */
+
+/* Justify Items */
+@each $key, $value in $justify-items {
+  .justify-items-#{$key} {
+    justify-items: $value;
+  }
+}
+@each $br_key, $value in $grid-breakpoints {
+  @include media-breakpoint-down($br_key, $breakpoints: $grid-breakpoints) {
+    @each $key, $value in $justify-items {
+      .justify-items-#{$br_key}-#{$key} {
+        justify-items: $value;
+      }
+    }
+  }
+}
+
+/* Justify Self */
+@each $key, $value in $justify-self {
+  .justify-self-#{$key} {
+    justify-self: $value;
+  }
+}
+@each $br_key, $value in $grid-breakpoints {
+  @include media-breakpoint-down($br_key, $breakpoints: $grid-breakpoints) {
+    @each $key, $value in $justify-self {
+      .justify-self-#{$br_key}-#{$key} {
+        justify-self: $value;
+      }
+    }
+  }
+}
+
+/* Justify Content */
+@each $key, $value in $justify-content {
+  .justify-content-#{$key} {
+    justify-content: $value;
+  }
+}
+@each $br_key, $value in $grid-breakpoints {
+  @include media-breakpoint-down($br_key, $breakpoints: $grid-breakpoints) {
+    @each $key, $value in $justify-content {
+      .justify-content-#{$br_key}-#{$key} {
+        justify-content: $value;
+      }
+    }
+  }
+}
+
+$flex-direction: (
+  row: row,
+  column: column,
+  row-reverse: row-reverse,
+  column-reverse: column-reverse,
+);
+
+@each $key, $value in $flex-direction {
+  .flex-#{$key} {
+    flex-direction: $value;
+  }
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+/* ---------------- Grid Classes ------------------- */
+$grid-template-columns: (
+  1: auto,
+  2: auto auto,
+  3: auto auto auto,
+  4: auto auto auto auto,
+  5: auto auto auto auto auto,
+  6: auto auto auto auto auto auto,
+);
+
+@each $key, $value in $grid-template-columns {
+  .grid-columns-#{$key} {
+    grid-template-columns: $value;
+  }
+
+  .col-span-#{$key} {
+    grid-column: span $key;
+  }
+}
+
+/* Grid Template Columns */
+@each $br_key, $br in $grid-breakpoints {
+  @include media-breakpoint-down($br_key, $breakpoints: $grid-breakpoints) {
+    .d-#{$br_key}-grid {
+      display: grid;
+    }
+    @each $key, $value in $grid-template-columns {
+      .grid-columns-#{$br_key}-#{$key} {
+        grid-template-columns: $value;
+      }
+    }
+  }
+}
+
+/* ---------------- Block Classes ------------------- */
+// .d-block {
+//   display: block;
+// }
+
+@each $br_key, $br in $grid-breakpoints {
+  @include media-breakpoint-down($br_key, $breakpoints: $grid-breakpoints) {
+    .d-#{$br_key}-block {
+      display: block;
+    }
+  }
+}
+
+/* ------------------- Font Size Classes ------------------ */
+@each $key, $value in $fonts {
+  .fs-#{$key} {
+    font-size: $value;
+  }
+}
+@each $br_key, $br in $grid-breakpoints {
+  @include media-breakpoint-down($br_key, $breakpoints: $grid-breakpoints) {
+    @each $key, $value in $fonts {
+      .fs-#{$br_key}-#{$key} {
+        font-size: $value;
+      }
+    }
+  }
+}
+
+/* ------------------- Line Height Classes ------------------ */
+@each $key, $value in $line-height {
+  .lh-#{$key} {
+    line-height: $value;
+  }
+}
+@each $br_key, $br in $grid-breakpoints {
+  @include media-breakpoint-down($br_key, $breakpoints: $grid-breakpoints) {
+    @each $key, $value in $line-height {
+      .lh-#{$br_key}-#{$key} {
+        line-height: $value;
+      }
+    }
+  }
+}
+
+/* ------------------- Font Weight Classes ------------------ */
+@each $key, $value in $font-weight {
+  .fw-#{$key} {
+    font-weight: $value;
+  }
+}
+@each $br_key, $br in $grid-breakpoints {
+  @include media-breakpoint-down($br_key, $breakpoints: $grid-breakpoints) {
+    @each $key, $value in $font-weight {
+      .fw-#{$br_key}-#{$key} {
+        font-weight: $value;
+      }
+    }
+  }
+}
+
+/* ------------------- Opacity Classes ------------------ */
+@each $key, $value in $opacity {
+  .opacity-#{$key} {
+    opacity: $value;
+  }
+}
+@each $br_key, $br in $grid-breakpoints {
+  @include media-breakpoint-down($br_key, $breakpoints: $grid-breakpoints) {
+    @each $key, $value in $opacity {
+      .opacity-#{$br_key}-#{$key} {
+        opacity: $value;
+      }
+    }
+  }
+}
+
+/* ------------------- z-index Classes ------------------ */
+@each $key, $value in $z-index {
+  .z-#{$key} {
+    z-index: $value;
+  }
+}
+@each $br_key, $br in $grid-breakpoints {
+  @include media-breakpoint-down($br_key, $breakpoints: $grid-breakpoints) {
+    @each $key, $value in $z-index {
+      .z-#{$br_key}-#{$key} {
+        z-index: $value;
+      }
+    }
+  }
+}
+
+/* ---------------- Text Align Classes ------------------- */
+$text-align: (
+  start: left,
+  end: right,
+  center: center,
+  justify: justify,
+);
+
+@each $key, $value in $text-align {
+  .text-#{$key} {
+    text-align: $value;
+  }
+}
+
+@each $br_key, $br in $grid-breakpoints {
+  @include media-breakpoint-down($br_key, $breakpoints: $grid-breakpoints) {
+    @each $key, $value in $text-align {
+      .text-#{$br_key}-#{$key} {
+        text-align: $value;
+      }
+    }
+  }
+}
+
+/* ----------------------- Border -------------------- */
+/* Border Classes */
+@each $key, $value in $border {
+  .border-#{$key} {
+    border: $value solid;
+  }
+  .border-t-#{$key} {
+    border-top: $value solid;
+  }
+  .border-b-#{$key} {
+    border-bottom: $value solid;
+  }
+  .border-l-#{$key} {
+    border-left: $value solid;
+  }
+  .border-r-#{$key} {
+    border-right: $value solid;
+  }
+
+  .border-#{$key}-transparent {
+    border: $value transparent solid;
+  }
+}
+
+@each $br_key, $br in $grid-breakpoints {
+  @include media-breakpoint-down($br_key, $breakpoints: $grid-breakpoints) {
+    @each $key, $value in $border {
+      .border-#{$br_key}-#{$key} {
+        border: $value solid;
+      }
+      .border-t-#{$br_key}-#{$key} {
+        border-top: $value solid;
+      }
+      .border-b-#{$br_key}-#{$key} {
+        border-bottom: $value solid;
+      }
+      .border-l-#{$br_key}-#{$key} {
+        border-left: $value solid;
+      }
+      .border-r-#{$br_key}-#{$key} {
+        border-right: $value solid;
+      }
+    }
+  }
+}
+
+/* Border Raduis*/
+@each $key, $value in $spaces {
+  .br-#{$key} {
+    border-radius: $value;
+  }
+
+  .br-tl-#{$key} {
+    border-top-left-radius: $value;
+  }
+  .br-tr-#{$key} {
+    border-top-right-radius: $value;
+  }
+  .br-bl-#{$key} {
+    border-bottom-left-radius: $value;
+  }
+  .br-br-#{$key} {
+    border-bottom-right-radius: $value;
+  }
+}
+@each $br_key, $br in $grid-breakpoints {
+  @include media-breakpoint-down($br_key, $breakpoints: $grid-breakpoints) {
+    @each $key, $value in $spaces {
+      .br-#{$br_key}-#{$key} {
+        border-radius: $value;
+      }
+
+      .br-t-#{$br_key}-#{$key} {
+        border-top: $value;
+      }
+      .br-b-#{$br_key}-#{$key} {
+        border-bottom: $value;
+      }
+      .br-l-#{$br_key}-#{$key} {
+        border-left: $value;
+      }
+      .br-r-#{$br_key}-#{$key} {
+        border-right: $value;
+      }
+      .br-tl-#{$br_key}-#{$key} {
+        border-top-left-radius: $value;
+      }
+      .br-tr-#{$br_key}-#{$key} {
+        border-top-right-radius: $value;
+      }
+      .br-bl-#{$br_key}-#{$key} {
+        border-bottom-left-radius: $value;
+      }
+      .br-br-#{$br_key}-#{$key} {
+        border-bottom-right-radius: $value;
+      }
+    }
+  }
+}
+
+/* ---------------------------------------- Positions Classes ------------------------------------------------ */
+$position: (
+  static: static,
+  relative: relative,
+  absolute: absolute,
+  fixed: fixed,
+  sticky: sticky,
+);
+
+@each $key, $value in $position {
+  .position-#{$key} {
+    position: $value;
+  }
+}
+@each $br_key, $br in $grid-breakpoints {
+  @include media-breakpoint-down($br_key, $breakpoints: $grid-breakpoints) {
+    @each $key, $value in $position {
+      .position-#{$br_key}-#{$key} {
+        position: $value;
+      }
+    }
+  }
+}
+
+@each $br_key, $br in $grid-breakpoints {
+  @include media-breakpoint-down($br_key, $breakpoints: $grid_breakpoints) {
+    .img-#{$br_key}-cover {
+      object-fit: cover;
+    }
+
+    .overflow-#{$br_key}-hidden {
+      overflow: hidden;
+    }
+
+    .overflow-#{$br_key}-auto {
+      overflow: auto;
+    }
+  }
+}
+/* --------------------------------------- Height and Width ----------------------------------------------- */
+
+$height-width: (
+  half: 50%,
+  full: 100%,
+  min: min-content,
+  max: max-content,
+  fit: fit-content,
+  inherit: inherit,
+  0: 0px,
+  1: 0.125rem,
+  2: 0.25rem,
+  3: 0.375rem,
+  4: 0.54rem,
+  5: 0.625rem,
+  6: 0.75rem,
+  7: 1rem,
+  8: 1.25rem,
+  9: 1.5rem,
+  10: 1.75rem,
+  11: 2rem,
+  12: 2.25rem,
+  13: 2.5rem,
+  14: 2.75rem,
+  15: 3rem,
+  16: 3.5rem,
+  18: 4rem,
+  20: 5rem,
+  24: 6rem,
+  28: 7rem,
+  32: 8rem,
+  36: 9rem,
+  40: 10rem,
+  42: 11rem,
+  44: 12rem,
+  46: 13rem,
+  48: 14rem,
+  52: 16rem,
+  54: 18rem,
+  56: 20rem,
+  58: 22rem,
+  59: 23rem,
+  60: 24rem,
+  62: 26rem,
+  64: 28rem,
+  65: 29rem,
+  66: 29.5rem,
+  68: 30rem,
+  70: 32rem,
+  72: 34rem,
+  74: 36rem,
+  76: 38rem,
+  78: 40rem,
+  80: 42rem,
+  82: 44rem,
+  84: 46rem,
+  86: 48rem,
+  88: 50rem,
+  90: 52rem,
+  92: 54rem,
+  94: 56rem,
+  96: 58rem,
+  98: 60rem,
+  auto: auto,
+);
+
+/* Height */
+@each $key, $value in $height-width {
+  .h-#{$key} {
+    height: $value;
+  }
+  .max-h-#{$key} {
+    max-height: $value;
+  }
+  .min-h-#{$key} {
+    min-height: $value;
+  }
+
+  .gap-#{$key} {
+    gap: $value;
+  }
+  .gap-y-#{$key} {
+    column-gap: $value;
+  }
+  .gap-x-#{$key} {
+    row-gap: $value;
+  }
+}
+@each $br_key, $br in $grid-breakpoints {
+  @include media-breakpoint-down($br_key, $breakpoints: $grid-breakpoints) {
+    @each $key, $value in $height-width {
+      .h-#{$br_key}-#{$key} {
+        height: $value;
+      }
+      .max-h-#{$br_key}-#{$key} {
+        max-height: $value;
+      }
+      .min-h-#{$br_key}-#{$key} {
+        min-height: $value;
+      }
+
+      .gap-#{$br_key}-#{$key} {
+        gap: $value;
+      }
+    }
+  }
+}
+
+/* Width */
+@each $key, $value in $height-width {
+  .w-#{$key} {
+    width: $value;
+  }
+  .max-w-#{$key} {
+    max-width: $value;
+  }
+  .min-w-#{$key} {
+    min-width: $value;
+  }
+}
+@each $br_key, $br in $grid-breakpoints {
+  @include media-breakpoint-down($br_key, $breakpoints: $grid-breakpoints) {
+    @each $key, $value in $height-width {
+      .w-#{$br_key}-#{$key} {
+        width: $value;
+      }
+      .max-w-#{$br_key}-#{$key} {
+        max-width: $value;
+      }
+      .min-w-#{$br_key}-#{$key} {
+        min-width: $value;
+      }
+    }
+  }
+}
+.h-screen {
+  height: 100vh;
+}
+.w-screen {
+  width: 100vw;
+}
+.max-h-screen {
+  max-height: 100vh;
+}
+.max-w-screen {
+  max-width: 100vw;
+}
+
+// height & width screen classes
+
+@each $br_key, $br in $grid-breakpoints {
+  @include media-breakpoint-down($br_key, $breakpoints: $grid-breakpoints) {
+    .h-#{$br_key}-screen {
+      height: 100vh;
+    }
+    .w-#{$br_key}-screen {
+      width: 100vw;
+    }
+    .max-h-#{$br_key}-screen {
+      max-height: 100vh;
+    }
+    .max-w-#{$br_key}-screen {
+      max-width: 100vw;
+    }
+  }
+}
+
+.right-0 {
+  right: 0;
+}
+
+.left-0 {
+  left: 0;
+}
+
+.top-0 {
+  top: 0px;
+}
+.bottom-0 {
+  bottom: 0px;
+}
+
+//  top Classes
+@each $key, $value in $height-width {
+  .top-#{$key} {
+    top: $value;
+  }
+  .bottom-#{$key} {
+    bottom: $value;
+  }
+  .left-#{$key} {
+    left: $value;
+  }
+  .right-#{$key} {
+    right: $value;
+  }
+}
+@each $br_key, $br in $grid-breakpoints {
+  @include media-breakpoint-down($br_key, $breakpoints: $grid-breakpoints) {
+    @each $key, $value in $height-width {
+      .top-#{$br_key}-#{$key} {
+        top: $value;
+      }
+      .bottom-#{$br_key}-#{$key} {
+        bottom: $value;
+      }
+      .left-#{$br_key}-#{$key} {
+        left: $value;
+      }
+      .right-#{$br_key}-#{$key} {
+        right: $value;
+      }
+    }
+  }
+}
+
+//  bottom Classes
+// @each $key, $value in $height-width {
+//   .bottom-#{$key} {
+//     bottom: $value;
+//   }
+// }
+// @each $br_key, $br in $grid-breakpoints {
+//   @include media-breakpoint-down($br_key, $breakpoints: $grid-breakpoints) {
+//     @each $key, $value in $height-width {
+//       .bottom-#{$br_key}-#{$key} {
+//         bottom: $value;
+//       }
+//     }
+//   }
+// }
+
+@each $br_key, $br in $grid-breakpoints {
+  @include media-breakpoint-down($br_key, $breakpoints: $grid-breakpoints) {
+    .h-#{$br_key}-screen {
+      height: calc(100vh - 4px);
+    }
+
+    .w-#{$br_key}-screen {
+      width: calc(100vw - 4px);
+    }
+  }
+}
+/* -------------- Text Decoration Classes ----------------*/
+
+$text-decoration: (
+  overline: overline,
+  line-through: line-through,
+  underline: underline,
+  none: none,
+);
+
+@each $key, $value in $text-decoration {
+  .text-decoration-#{$key} {
+    text-decoration: $value;
+  }
+}
+
+@each $br_key, $br in $grid-breakpoints {
+  @each $key, $value in $text-decoration {
+    .text-decoration-#{$br_key}-#{$key} {
+      text-decoration: $value;
+    }
+  }
+}
+
+/* -------------- General Classes ----------------*/
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.flex-column {
+  flex-direction: column;
+}
+.float-left {
+  float: left;
+}
+.float-right {
+  float: right;
+}
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.header-specific-columns {
+  grid-template-columns: auto min-content;
+}
+
+/* Border */
+.border-none {
+  border: none;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+.img-fluid {
+  @include img-fluid();
+}
+
+.main_padding {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.top-50 {
+  top: 50px;
+}
+
+.bottom-auto {
+  bottom: auto;
+}
+
+.img-cover {
+  object-fit: cover;
+}
+
+.column-gap {
+  column-gap: 30px;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.overflow-auto {
+  overflow: auto;
+}
+.overflow-scroll {
+  overflow: scroll;
+}
+
+.max-h-full {
+  max-height: 100%;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-lowercase {
+  text-transform: lowercase;
+}
+
+.text-capitalize {
+  text-transform: capitalize;
+}
+
+.image-shadow {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.603)
+  );
+}
+
+.bottom-0 {
+  bottom: 0 !important;
+}
+
+.-z-1 {
+  z-index: -1;
+}
+
+// import React from "react";
+
+// const BackgroundImageComponent = (props) => {
+//   const { topCss, bottomCss, topImg, bottomImg } = props;
+//   return (
+//     <>
+//       <img
+//         src={topImg}
+//         className={`position-absolute d-flex justify-content-center m-0 h-full right-0 top-0 ${topCss && topCss}`}
+//         alt=""
+//       />
+//       <img
+//         src={bottomImg}
+//         className={`position-absolute d-flex justify-content-center m-0 h-full left-7 left-lg-0 bottom-0 ${bottomCss && bottomCss}`}
+//         alt=""
+//       />
+//     </>
+//   );
+// };
+
+// export default BackgroundImageComponent;

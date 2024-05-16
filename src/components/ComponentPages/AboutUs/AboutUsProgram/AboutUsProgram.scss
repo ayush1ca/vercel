@@ -1,0 +1,25 @@
+@media screen and (min-width: 576px) {
+  .about_us_program_image {
+    background-image: url("../../../../assets/images/BgLines/AboutUs/AboutUsBottomBlue.svg"),
+      url("../../../../assets/images/BgLines/ContactUs/ContactUsTop.svg");
+    background-repeat: no-repeat;
+    background-position: bottom left, top right;
+  }
+}
+@media screen and (max-width: 576px) {
+  .about_us_program_image {
+    position: relative;
+  }
+  .about_us_program_image::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url("../../../../assets/images/BgLines/ContactUs/ContactUsTop.svg");
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    opacity: 0.5; /* Adjust the opacity value as desired */
+  }
+}

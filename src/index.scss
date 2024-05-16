@@ -1,0 +1,47 @@
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+}
+
+// .custom-fonts {
+
+@font-face {
+  font-family: "Familjen Grotesk";
+  src: url("./assets/icons/font/FamiljenGrotesk.ttf") format("truetype");
+  /* Add more src declarations for other font formats if available */
+  font-weight: normal;
+  font-style: normal;
+}
+
+.custom-fonts {
+  font-family: "Familjen Grotesk", sans-serif;
+  letter-spacing: 0.05rem;
+}
+
+.custom-icon-circle {
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin custom_list($color) {
+  ul {
+    list-style-type: none;
+  }
+
+  ul li::before {
+    content: "▪";
+    color: $color;
+    display: inline-block;
+    width: 0.9em;
+    margin-left: -1em;
+    font-size: 1.2em;
+  }
+}
+.custom_list_blue {
+  @include custom_list(#1fa9ff);
+}
+.custom_list_egg {
+  @include custom_list(#00e0be);
+}

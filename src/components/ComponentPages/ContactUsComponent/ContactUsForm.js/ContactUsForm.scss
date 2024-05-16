@@ -1,0 +1,36 @@
+.custom_contact_us_height {
+  height: 100vh;
+}
+
+@media screen and (max-width: 1200px) {
+  .custom_contact_us_height {
+    height: 100%;
+  }
+}
+
+// .error_message {
+//   .ant-form-item-explain-error {
+//     padding-left: 0px !important;
+//   }
+// }
+
+.custom_input {
+    .ant-input:focus {
+        box-shadow: none !important;
+    }
+}
+.contact_us_image {
+  background-image: url("../../../../assets/images/BgLines/ContactUs/ContactUsBottom.svg"),
+    url("../../../../assets/images/BgLines/ContactUs/ContactUsTop.svg");
+  background-repeat: no-repeat;
+  background-position: bottom left, top right;
+}
+
+@media screen and (max-width: 576px) {
+  .contact_us_image {
+    background-image: url("../../../../assets/images/BgLines/ContactUs/ContactUsBottom.svg");
+    background-repeat: no-repeat;
+    top: 0;
+    left: 0;
+  }
+}

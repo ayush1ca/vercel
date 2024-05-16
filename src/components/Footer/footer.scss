@@ -1,0 +1,17 @@
+@import "../../assets/styles/base/typography.scss";
+@import "../../assets/styles/base/mixins.scss";
+
+.ant-layout-footer {
+  background-color: transparent;
+  @include media_query(576px) {
+    padding: 0px;
+  }
+}
+
+.footer-2-columns {
+  grid-template-columns: 260px 310px;
+}
+
+// .footer-specific-columns {
+//   grid-template-columns: 50px 50px 50px min-content;
+// }

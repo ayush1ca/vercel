@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="253" height="731" viewBox="0 0 253 731">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_33205" data-name="Rectangle 33205" width="253" height="731" transform="translate(-1106 365)" fill="#fff"/>
+    </clipPath>
+    <linearGradient id="linear-gradient" x1="0.715" y1="-0.173" x2="0.389" y2="0.903" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="clip-Homepage_-_Pattern_1">
+      <rect width="253" height="731"/>
+    </clipPath>
+  </defs>
+  <g id="Homepage_-_Pattern_1" data-name="Homepage - Pattern 1" clip-path="url(#clip-Homepage_-_Pattern_1)">
+    <g id="BG" transform="translate(1106 -365)" clip-path="url(#clip-path)">
+      <path id="Ellipse_653_-_Outline" data-name="Ellipse 653 - Outline" d="M574.824,76.5C299.607,76.5,76.5,299.607,76.5,574.824S299.607,1073.15,574.824,1073.15,1073.15,850.042,1073.15,574.824,850.042,76.5,574.824,76.5m0-103.5c331.847,0,601.824,269.977,601.824,601.824s-269.977,601.824-601.824,601.824S-27,906.671-27,574.824,242.977-27,574.824-27Z" transform="translate(-915.835 1208.675) rotate(-177)" fill="url(#linear-gradient)"/>
+    </g>
+  </g>
+</svg>

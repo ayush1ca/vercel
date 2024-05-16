@@ -1,0 +1,100 @@
+@import "variables";
+@import "mixins";
+@import "base";
+/* Typography Classes */
+
+.font-default {
+  font-family: $default-font-family;
+}
+
+$colors-for-bg: (
+  primary: $primary-color,
+  primary-light: $primary-light-color,
+  primary-lighter: $primary-lighter-color,
+  primary-dark: $primary-dark-color,
+  secondary: $secondary-color,
+  secondary-light: $secondary-light-color,
+  white: $white-color,
+  black: $black-color,
+  orange: $orange-color,
+  yellow: $yellow-color,
+  yellow-dark: $yellow-dark-color,
+  placeholder: $placeholder-color,
+  link: $link-color,
+  green:$green-color,
+  egg-blue: $egg-blue-color,
+);
+
+$colors-for-text: (
+  primary: $primary-color,
+  primary-dark: $primary-dark-color,
+  primary-light: $primary-light-color,
+  primary-lighter: $primary-lighter-color,
+  secondary: $secondary-color,
+  secondary-light: $secondary-light-color,
+  white: $white-color,
+  black: $black-color,
+  orange: $orange-color,
+  yellow: $yellow-color,
+  yellow-dark: $yellow-dark-color,
+  placeholder: $placeholder-color,
+  link: $link-color,
+  green:$green-color,
+  egg-blue: $egg-blue-color,
+);
+
+.bg-none {
+  background-color: transparent;
+}
+
+@each $key, $bg-color in $colors-for-bg {
+  .bg-#{"" + $key} {
+    background-color: $bg-color;
+  }
+  @each $op_key, $op_value in $opacity {
+    .bg-#{"" + $key}-#{$op_key} {
+      background-color: rgba($color: $bg-color, $alpha: $op_value);
+    }
+  }
+}
+
+@each $br_key, $br in $grid-breakpoints {
+  @include media-breakpoint-down($br_key, $breakpoints: $grid-breakpoints) {
+    @each $key, $bg-color in $colors-for-bg {
+      .bg-#{$br_key}-#{"" + $key} {
+        background-color: $bg-color;
+      }
+      @each $op_key, $op_value in $opacity {
+        .bg-#{"" + $key}-#{$br_key}-#{$op_key} {
+          background-color: rgba($color: $bg-color, $alpha: $op_value);
+        }
+      }
+    }
+  }
+}
+
+@each $key, $text-color in $colors-for-text {
+  .text-#{"" + $key} {
+    color: $text-color;
+  }
+  @each $op_key, $op_value in $opacity {
+    .text-#{"" + $key}-#{$op_key} {
+      color: rgba($color: $text-color, $alpha: $op_value);
+    }
+  }
+}
+
+@each $br_key, $br in $grid-breakpoints {
+  @include media-breakpoint-down($br_key, $breakpoints: $grid-breakpoints) {
+    @each $key, $text-color in $colors-for-text {
+      .text-#{$br_key}-#{"" + $key} {
+        color: $text-color;
+      }
+      @each $op_key, $op_value in $opacity {
+        .text-#{"" + $key}-#{$br_key}-#{$op_key} {
+          color: rgba($color: $text-color, $alpha: $op_value);
+        }
+      }
+    }
+  }
+}
